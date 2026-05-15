@@ -10,4 +10,16 @@
         <maven.compiler.release>25</maven.compiler.release>
         <exec.mainClass>com.unincor.clinicamedicaunincor.ClinicaMedicaUnincor</exec.mainClass>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.46</version>
+            <scope>compile</scope>
+        </dependency>
+        
+    </dependencies>
+    
+    
 </project>

@@ -56,7 +56,7 @@
                       <Component id="jLabel3" min="-2" pref="123" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="302" max="32767" attributes="0"/>
+              <EmptySpace pref="433" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,7 +78,7 @@
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="148" max="32767" attributes="0"/>
+              <EmptySpace pref="201" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
