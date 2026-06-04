@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  *
@@ -17,10 +18,11 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "tipos_exame")
+@ToString
 public class TipoExame {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_tipo_exame")
     private Integer idTipoExame;
     private String descricao;

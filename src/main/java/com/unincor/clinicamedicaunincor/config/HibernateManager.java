@@ -4,8 +4,12 @@
  */
 package com.unincor.clinicamedicaunincor.config;
 
+import com.unincor.clinicamedicaunincor.model.domain.Consulta;
 import com.unincor.clinicamedicaunincor.model.domain.Especialidade;
+import com.unincor.clinicamedicaunincor.model.domain.Exame;
+import com.unincor.clinicamedicaunincor.model.domain.Medico;
 import com.unincor.clinicamedicaunincor.model.domain.Paciente;
+import com.unincor.clinicamedicaunincor.model.domain.TipoExame;
 import jakarta.persistence.EntityManager;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -29,9 +33,12 @@ public class HibernateManager {
                      .configure("hibernate.cfg.xml")
                      .build();
              Metadata md = new MetadataSources(ssr)
-//                     .addAnnotatedClass(Especialidade.class)
-//                     .addAnnotatedClass(Paciente.class)
-                     .addPackage("com.unincor.clinicamedicaunincor.model.domain")
+                     .addAnnotatedClass(Consulta.class)
+                     .addAnnotatedClass(Especialidade.class)
+                     .addAnnotatedClass(Exame.class)
+                     .addAnnotatedClass(Medico.class)
+                     .addAnnotatedClass(Paciente.class)
+                     .addAnnotatedClass(TipoExame.class)
                      .getMetadataBuilder().build();
              SessionFactory sessionFactory = md
                      .getSessionFactoryBuilder().build();

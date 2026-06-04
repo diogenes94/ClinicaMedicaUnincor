@@ -29,7 +29,7 @@ import lombok.Setter;
 public class Consulta {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_consulta")
     private Integer idConsulta;
     

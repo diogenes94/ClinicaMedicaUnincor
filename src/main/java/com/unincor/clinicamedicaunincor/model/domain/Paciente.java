@@ -9,6 +9,7 @@ import jakarta.persistence.Table;
 import java.time.LocalDate;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  *
@@ -18,10 +19,11 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "pacientes")
+@ToString
 public class Paciente {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_paciente")
     private Integer idPaciente;
     private String nome;

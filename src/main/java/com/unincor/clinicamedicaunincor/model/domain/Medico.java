@@ -25,7 +25,7 @@ import lombok.Setter;
 @Table(name = "medicos")
 public class Medico {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_medico")
     private Integer idMedico;
     private String nome;
