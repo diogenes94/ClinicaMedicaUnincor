@@ -4,13 +4,13 @@
  */
 package com.unincor.clinicamedicaunincor.model.dao;
 
-import com.unincor.clinicamedicaunincor.model.domain.Paciente;
+import com.unincor.clinicamedicaunincor.model.domain.Consulta;
 
 /**
  *
  * @author dioge
  */
-public class PacienteDao extends AbstractDao<Paciente>{
+public class ConsultaDao extends AbstractDao<Consulta>{
     
     
     

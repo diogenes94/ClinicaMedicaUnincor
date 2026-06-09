@@ -27,5 +27,15 @@ public class Especialidade {
     private Integer idEspecialidade;
     
     private String nome;
+
+    public Especialidade() {
+    }
+
+    public Especialidade(Integer idEspecialidade, String nome) {
+        this.idEspecialidade = idEspecialidade;
+        this.nome = nome;
+    }
+    
+    
     
 }

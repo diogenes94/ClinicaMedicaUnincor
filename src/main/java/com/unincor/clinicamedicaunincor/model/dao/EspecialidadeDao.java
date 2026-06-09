@@ -7,6 +7,7 @@ package com.unincor.clinicamedicaunincor.model.dao;
 import com.unincor.clinicamedicaunincor.config.HibernateManager;
 import com.unincor.clinicamedicaunincor.model.domain.Especialidade;
 import jakarta.persistence.EntityManager;
+import java.util.List;
 
 /**
  *
@@ -15,13 +16,19 @@ import jakarta.persistence.EntityManager;
 public class EspecialidadeDao extends AbstractDao<Especialidade>{
     
     
+    public List<Especialidade> buscarTudo() {
+        return getEntityManager()
+                .createQuery("from Especialidade ")
+                .getResultList();
+    }
     
     public static void main(String[] args) {
-        var e1 = new Especialidade();
-        e1.setNome("Cardiologista");
-        
+//        var e1 = new Especialidade();
+//        e1.setNome("Cardiologista");
+//        
         var especialidadeDao = new EspecialidadeDao();
-        System.out.println(especialidadeDao.salvar(e1));
+//        System.out.println(especialidadeDao.salvar(e1));
+        especialidadeDao.buscarTudo().forEach(System.out::println);
         
     }
     

@@ -14,6 +14,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  *
@@ -23,6 +24,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "medicos")
+@ToString
 public class Medico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

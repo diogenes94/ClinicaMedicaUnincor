@@ -22,9 +22,7 @@ public abstract class AbstractDao<T> {
 
     public AbstractDao() {
         reflection();
-    }
-    
-    
+    }    
 
     protected EntityManager getEntityManager() {
         if (entityManager == null) {
@@ -44,6 +42,21 @@ public abstract class AbstractDao<T> {
         return getEntityManager().createQuery("from " 
                 + aClass.getSimpleName()).getResultList();
                 
+    }
+    
+    public T findById(Integer id) {
+        return getEntityManager().find(aClass, id);
+    }
+    
+    public void delete(T value) {
+        getEntityManager().getTransaction().begin();
+        getEntityManager().remove(value);
+        getEntityManager().getTransaction().commit();
+    }
+    
+    public void delete(Integer id) {
+        T value = findById(id);
+        delete(value);
     }
 
     private void reflection() {

@@ -32,6 +32,19 @@ public class Paciente {
     private LocalDate dataNascimento;
     private String telefone;
     private String endereco;
+
+    public Paciente() {
+    }
+
+    public Paciente(Integer idPaciente, String nome, String cpf, 
+            LocalDate dataNascimento, String telefone, String endereco) {
+        this.idPaciente = idPaciente;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
+        this.telefone = telefone;
+        this.endereco = endereco;
+    }   
     
     
 }

@@ -27,4 +27,28 @@ public class TipoExame {
     private Integer idTipoExame;
     private String descricao;
     
+    public TipoExame () {
+        
+    }
+    
+    public TipoExame(String descricao) {
+        this.descricao = descricao;
+    }
+    
+    //Construtor
+    public TipoExame (Integer idTipoExame, String descricao){
+        this.idTipoExame = idTipoExame;
+        this.descricao = descricao;
+    }
+    
+    
+    public static void main(String[] args) {
+        TipoExame te1 = new TipoExame(1, "Hemograma");
+        TipoExame te2 = new TipoExame();
+        TipoExame te3 = new TipoExame("Curva Glicêmica");
+        
+        System.out.println(te1);
+        System.out.println(te2);
+        System.out.println(te3);
+    }
 }
