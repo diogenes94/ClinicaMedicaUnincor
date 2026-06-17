@@ -15,21 +15,19 @@ import java.util.List;
  */
 public class EspecialidadeDao extends AbstractDao<Especialidade>{
     
-    
-    public List<Especialidade> buscarTudo() {
-        return getEntityManager()
-                .createQuery("from Especialidade ")
-                .getResultList();
+    public Especialidade buscarPorNome(String nomeParam) {
+        var query = getEntityManager()
+                .createQuery("from Especialidade e "
+                        + "where e.nome = :nome");
+        query.setParameter("nome", nomeParam);
+        var resultados = query.getResultList();
+        if(resultados == null || resultados.isEmpty()) {
+            return null;
+        }
+        return (Especialidade) resultados.get(0);
     }
     
-    public static void main(String[] args) {
-//        var e1 = new Especialidade();
-//        e1.setNome("Cardiologista");
-//        
-        var especialidadeDao = new EspecialidadeDao();
-//        System.out.println(especialidadeDao.salvar(e1));
-        especialidadeDao.buscarTudo().forEach(System.out::println);
-        
-    }
+    
+   
     
 }
